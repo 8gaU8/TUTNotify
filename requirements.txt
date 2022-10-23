@@ -1,0 +1,3 @@
+git+https://github.com/straxFromIbr/message_senders
+requests
+beautifulsoup4
