@@ -16,18 +16,20 @@ def get_schedule(schedule: dict) -> dict:
     return schedule[today]
 
 
-def base_msg(time:str, s:dict) -> str:
+def base_msg(time: str, s: dict) -> str:
     return "{time}限: {title}@{room}".format(
         time=time,
         title=s["title"],
         room=s["room"],
     )
 
+
 def build_current_msg(today_sch: dict, time: str):
     current_sch = today_sch.get(time, None)
     if current_sch is None:
         return None
     return base_msg(time, current_sch)
+
 
 def build_today_msg(today_sch: dict):
     times = [s for s in today_sch.keys()]
